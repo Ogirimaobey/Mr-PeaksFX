@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peak Tutors | Master the Financial Markets with Mr. Peak FX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000; /* A true, deep black for high contrast */
+            color: #E6EDF3; 
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #FBBF24, #F59E0B); /* Amber to Gold */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .cta-button {
+            background: linear-gradient(90deg, #FBBF24, #D97706); /* Richer Gold Gradient */
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(251, 191, 36, 0.2);
+            color: #111827; /* Dark text for contrast on gold */
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(251, 191, 36, 0.3);
+        }
+        .secondary-button {
+            background-color: transparent;
+            border: 2px solid #FBBF24;
+            color: #FBBF24;
+            transition: all 0.3s ease;
+        }
+        .secondary-button:hover {
+            background-color: rgba(251, 191, 36, 0.1);
+            color: #FCD34D;
+        }
+        .glass-card {
+            background: rgba(17, 17, 17, 0.7); /* Darker, less transparent glass */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 1rem;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #FBBF24;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link:hover {
+            color: #FBBF24;
+        }
+        .peak-bg {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='%23FBBF24' fill-opacity='0.03'%3E%3Cpath d='M96 0L4 100H0V96L100 0h-4zM100 4L0 96V100h4L100 0v4z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="peak-bg">
+
+    <!-- Header & Navigation -->
+    <header class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="glass-card p-3">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="text-2xl font-bold gradient-text font-heading">Peak Tutors</a>
+                    <nav class="hidden md:flex items-center space-x-8">
+                        <a href="#courses" class="nav-link text-gray-300">Courses</a>
+                        <a href="#about" class="nav-link text-gray-300">About</a>
+                        <a href="#testimonials" class="nav-link text-gray-300">Testimonials</a>
+                        <a href="#contact" class="nav-link text-gray-300">Contact</a>
+                    </nav>
+                    <a href="#courses" class="hidden md:block cta-button text-black font-bold px-6 py-2 rounded-lg">Enroll Now</a>
+                    <button id="mobile-menu-button" class="md:hidden text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+         <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+             <div class="container mx-auto px-6 pb-4">
+                <div class="glass-card p-4 flex flex-col items-center space-y-4">
+                    <a href="#courses" class="nav-link text-gray-300 w-full text-center">Courses</a>
+                    <a href="#about" class="nav-link text-gray-300 w-full text-center">About</a>
+                    <a href="#testimonials" class="nav-link text-gray-300 w-full text-center">Testimonials</a>
+                    <a href="#contact" class="nav-link text-gray-300 w-full text-center">Contact</a>
+                    <a href="#courses" class="cta-button text-black font-bold px-8 py-3 rounded-lg w-full text-center mt-2">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center pt-24 pb-12 relative overflow-hidden">
+             <!-- Background Glow Effect -->
+            <div class="absolute top-1/4 left-0 w-96 h-96 bg-amber-500/10 rounded-full filter blur-3xl opacity-50 animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-orange-500/10 rounded-full filter blur-3xl opacity-50 animate-pulse animation-delay-4000"></div>
+
+            <div class="container mx-auto px-6 text-center z-10">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight">
+                    Reach Your Peak.
+                    <span class="gradient-text block">Master Your Wealth.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+                    Join Igba Mathew (Mr. Peak FX) and an elite community of traders engineering their financial freedom with proven, powerful strategies.
+                </p>
+                <div class="flex justify-center items-center space-x-4">
+                    <a href="#courses" class="cta-button font-bold px-8 py-4 rounded-lg text-lg">Become an Elite Trader</a>
+                    <a href="#about" class="secondary-button font-bold px-8 py-4 rounded-lg text-lg">Discover the Method</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Social Proof Section -->
+        <section class="py-12">
+            <div class="container mx-auto px-6">
+                 <p class="text-center text-gray-500 font-medium mb-6 uppercase tracking-widest">A Trusted Voice in African Finance</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70">
+                    <span class="font-semibold text-2xl font-heading">Instagram</span>
+                    <span class="font-semibold text-2xl font-heading">YouTube</span>
+                    <span class="font-semibold text-2xl font-heading">X / Twitter</span>
+                    <span class="font-semibold text-2xl font-heading">Facebook</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <!-- Placeholder for an image of Mr. Peak FX -->
+                        <div class="glass-card p-2 rounded-2xl shadow-2xl">
+                           <img src="https://placehold.co/600x600/111111/FBBF24?text=Mr.+Peak+FX" alt="Igba Mathew - Mr. Peak FX" class="rounded-xl w-full h-auto">
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">From <span class="gradient-text">Engineer</span> to Market Architect</h2>
+                        <p class="text-gray-300 mb-6 text-lg">
+                            With the analytical mind of an Engineer, Igba Mathew (Mr. Peak FX) approaches the markets not as a gambler, but as a strategist. This disciplined perspective is the gold standard of Peak Tutors.
+                        </p>
+                        <p class="text-gray-400 mb-6">
+                            Our mission is to equip you with a robust framework for consistent profitability. We don't just teach chart patterns; we build professional traders from the ground up.
+                        </p>
+                        <a href="#contact" class="secondary-button font-semibold px-6 py-3 rounded-lg">Start Your Journey</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="py-20">
+             <div class="absolute inset-0 h-full w-full bg-black bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:72px_72px] opacity-20"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Your Ascent to <span class="gradient-text">Trading Mastery</span></h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto mt-4">Select your path. Each program is engineered to forge elite traders.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Course Card 1 -->
+                    <div class="glass-card p-8 flex flex-col text-center items-center transform hover:-translate-y-2 transition-transform duration-300 border-t-4 border-amber-400">
+                        <h3 class="text-2xl font-bold mb-3">Foundation Program</h3>
+                        <p class="text-gray-400 flex-grow mb-6">Master the core principles of Forex, from market structure to flawless execution.</p>
+                        <button class="cta-button w-full font-bold py-3 rounded-lg mt-4">Enroll Now - $299</button>
+                    </div>
+                    <!-- Course Card 2 -->
+                    <div class="glass-card p-8 flex flex-col text-center items-center transform hover:-translate-y-2 transition-transform duration-300 border-t-4 border-amber-500">
+                        <h3 class="text-2xl font-bold mb-3">Advanced Strategy</h3>
+                        <p class="text-gray-400 flex-grow mb-6">Unlock institutional concepts, advanced price action, and our proprietary trading models.</p>
+                        <button class="cta-button w-full font-bold py-3 rounded-lg mt-4">Enroll Now - $499</button>
+                    </div>
+                    <!-- Course Card 3 -->
+                    <div class="glass-card p-8 flex flex-col text-center items-center transform hover:-translate-y-2 transition-transform duration-300 border-t-4 border-orange-500">
+                        <h3 class="text-2xl font-bold mb-3">Peak Performance Mentorship</h3>
+                        <p class="text-gray-400 flex-grow mb-6">Direct access to Mr. Peak FX. Personalized guidance, trade reviews, and psychological conditioning.</p>
+                        <button class="secondary-button w-full font-bold py-3 rounded-lg mt-4">Apply for Mentorship</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Success Stories from the <span class="gradient-text">Peak Community</span></h2>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="glass-card p-8">
+                        <p class="text-gray-300 italic mb-6">"The engineering approach to trading is real. For the first time, I have a clear, repeatable process. No more guesswork. My results are proof."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x48/FBBF24/111827?text=TD" alt="Student Testimonial" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-lg">Tunde D.</h4>
+                                <p class="text-sm text-amber-400">Lagos, Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Testimonial 2 -->
+                    <div class="glass-card p-8">
+                        <p class="text-gray-300 italic mb-6">"I thought I knew technical analysis, but the advanced strategy course opened my eyes to how institutional players actually move the market. Game-changer."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x48/F59E0B/111827?text=CA" alt="Student Testimonial" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-lg">Chioma A.</h4>
+                                <p class="text-sm text-amber-400">Abuja, Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Testimonial 3 -->
+                    <div class="glass-card p-8">
+                        <p class="text-gray-300 italic mb-6">"The mentorship program isn't just about charts. Mr. Peak helped me conquer the psychological battles that were holding me back. I'm a different trader now."</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/48x48/D97706/111827?text=FE" alt="Student Testimonial" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-lg">Femi E.</h4>
+                                <p class="text-sm text-amber-400">Accra, Ghana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter/Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="glass-card p-8 md:p-12 rounded-2xl text-center">
+                     <h2 class="text-3xl md:text-4xl font-bold">Become a <span class="gradient-text">Smarter Trader Today</span></h2>
+                     <p class="text-gray-400 max-w-2xl mx-auto mt-4 mb-8">Join our exclusive mailing list for free market analysis and strategies you won't find anywhere else.</p>
+                     <form id="newsletter-form" class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
+                        <input type="email" placeholder="Enter your email address" required class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-amber-500 text-white">
+                        <button type="submit" class="cta-button text-black font-semibold py-3 px-8 rounded-lg">Get Free Insights</button>
+                     </form>
+                     <p id="form-message" class="mt-4 text-sm text-gray-500"></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <a href="#" class="text-3xl font-bold gradient-text mb-4 inline-block font-heading">Peak Tutors</a>
+            <div class="flex justify-center space-x-6 my-6">
+                 <a href="#courses" class="hover:text-amber-400 transition-colors">Courses</a>
+                 <a href="#about" class="hover:text-amber-400 transition-colors">About</a>
+                 <a href="#testimonials" class="hover:text-amber-400 transition-colors">Testimonials</a>
+                 <a href="mailto:support@thepeaktutors.com" class="hover:text-amber-400 transition-colors">Contact</a>
+            </div>
+            <p class="text-sm">
+                &copy; <span id="year"></span> Peak Tutors. All Rights Reserved. <br>
+                This website is for educational purposes only. Trading involves substantial risk and is not suitable for all investors.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Sticky Navbar on Scroll
+        const navbar = document.getElementById('navbar');
+        window.onscroll = () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/50', 'backdrop-blur-lg');
+            } else {
+                navbar.classList.remove('bg-black/50', 'backdrop-blur-lg');
+            }
+        };
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Newsletter Form Submission
+        const newsletterForm = document.getElementById('newsletter-form');
+        const formMessage = document.getElementById('form-message');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formMessage.textContent = 'Success! Welcome to the inner circle. Check your email.';
+            formMessage.style.color = '#FBBF24';
+            newsletterForm.reset();
+            setTimeout(() => {
+                formMessage.textContent = '';
+            }, 5000);
+        });
+
+    </script>
+</body>
+</html>
+
